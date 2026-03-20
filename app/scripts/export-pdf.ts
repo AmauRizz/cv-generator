@@ -1,6 +1,6 @@
 import puppeteer from 'puppeteer'
 import { glob } from 'glob'
-import { resolve } from 'path'
+import { resolve, basename } from 'path'
 import { mkdirSync } from 'fs'
 import { createServer } from 'vite'
 
@@ -15,11 +15,10 @@ await server.listen()
 const browser = await puppeteer.launch()
 
 for (const file of glob.sync('contents/*.ts')) {
-    const { basename } = await import('path')
     const name = basename(file, '.ts')
 
     const page = await browser.newPage()
-    await page.goto(`http://localhost:5174/index.html`, {
+    await page.goto(`http://localhost:5174/index.html?content=${name}`, {
         waitUntil: 'networkidle0'
     })
 
