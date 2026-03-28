@@ -4,14 +4,14 @@ import QRCode from 'qrcode'
 const url = 'https://links.amaurymulcey.fr'
 
 document.documentElement.lang = 'fr'
+document.title = 'CV - Amaury Mulcey'
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
-<div class="h-[297mm] w-[210mm] bg-neutral-50 text-gray-900 px-6 py-5 mx-auto font-sans text-sm">
-
+<div class="mx-auto font-sans text-sm">
     <section class="mb-6">
         <h1 class="text-5xl font-bold text-gray-800 tracking-tight">MULCEY Amaury</h1>
         <h2 class="text-xl text-blue-600 font-semibold mt-1">
-            Étudiant en Informatique - Candidature Technicien de Prélèvements Saisonnier
+            Étudiant en Informatique - Candidat Technicien de Prélèvements Saisonnier
         </h2>
         <div class="flex mt-2 gap-12 text-sm text-gray-600">
             <div>
@@ -22,7 +22,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
             
             <div>
                 <a href="mailto:contact@amaurymulcey.fr" class="hover:text-blue-600 flex items-center gap-1">
-                    amaury.mulcey.pro@gmail.com
+                    contact@amaurymulcey.fr
                 </a>
             </div>
             
@@ -38,10 +38,9 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
                 <h2 class="font-bold uppercase text-blue-600 text-sm tracking-widest">Résumé</h2>
                 <hr class="border border-blue-300 rounded-full mt-0.5 mb-2">
                 <p class="leading-relaxed text-gray-700">
-                    Étudiant en licence scientifique, rigoureux et autonome, titulaire du Permis B,
-                    je souhaite mettre à profit mes compétences en informatique et mon sens du terrain dans le cadre d'un contrat saisonnier.
-                    À l'aise avec les outils numériques et les protocoles rigoureux,
-                    je suis motivé par la découverte d'un milieu scientifique différent de ma formation.
+                    Étudiant en licence informatique, rigoureux et autonome, titulaire du permis B,
+                    je souhaite découvrir un milieu scientifique de terrain pour l'été 2026.
+                    À l'aise avec les outils numériques, la conduite longue distance et le travail en extérieur.
                 </p>
             </section>
 
@@ -51,27 +50,27 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
                 <div class="space-y-2">
                     <div class="flex items-start gap-2 text-xs">
                         <span class="font-semibold text-gray-800 shrink-0">Conduite & déplacements</span>
-                        <span class="text-gray-400">-</span>
-                        <span class="text-gray-600">Permis B (2024), habitué aux longs trajets</span>
+                        <span class="text-gray-400">•</span>
+                        <span class="text-gray-600">Permis B (2024), à l’aise avec la conduite, habitué aux longues distances (road trip Irlande)</span>
                     </div>
                     <div class="flex items-start gap-2 text-xs">
                         <span class="font-semibold text-gray-800 shrink-0">Outils numériques</span>
-                        <span class="text-gray-400">-</span>
-                        <span class="text-gray-600">Maîtrise tablette, PC et logiciels de saisie</span>
+                        <span class="text-gray-400">•</span>
+                        <span class="text-gray-600">Certification Pix. Maîtrise tablette, PC et logiciels de saisie</span>
                     </div>
                     <div class="flex items-start gap-2 text-xs">
                         <span class="font-semibold text-gray-800 shrink-0">Rigueur & protocoles</span>
-                        <span class="text-gray-400">-</span>
+                        <span class="text-gray-400">•</span>
                         <span class="text-gray-600">Respect des consignes strictes, traçabilité</span>
                     </div>
                     <div class="flex items-start gap-2 text-xs">
                         <span class="font-semibold text-gray-800 shrink-0">Sciences & analyses</span>
-                        <span class="text-gray-400">-</span>
-                        <span class="text-gray-600">Bases en physique-chimie (spécialité Bac)</span>
+                        <span class="text-gray-400">•</span>
+                        <span class="text-gray-600">Spécialités Maths, NSI & Physique-Chimie (jusqu'en Première)</span>
                     </div>
                     <div class="flex items-start gap-2 text-xs">
                         <span class="font-semibold text-gray-800 shrink-0">Terrain & physique</span>
-                        <span class="text-gray-400">-</span>
+                        <span class="text-gray-400">•</span>
                         <span class="text-gray-600">Bivouac, musculation, apte au port de charges</span>
                     </div>
                 </div>
@@ -95,10 +94,10 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
                             <p class="font-semibold text-gray-800">Erasmus - University of Galway</p>
                             <span class="text-xs bg-green-100 text-green-700 font-semibold px-2 py-0.5 rounded-full">Mobilité internationale</span>
                         </div>
-                        <p class="text-xs text-gray-500 mt-1">Septembre 2025 - Janvier 2026 · Galway, Irlande</p>
+                        <p class="text-xs text-gray-500 mt-1">Septembre 2025 - Janvier 2026 • Galway, Irlande</p>
                         <p class="text-xs text-gray-600 mt-1.5">
                             Cours dispensés en anglais dans un environnement universitaire international.
-                            Renforcement de l'autonomie, de l'adaptabilité et de la communication en milieu multiculturel.
+                            Road trip à travers l'Irlande, navigation et adaptabilité.
                         </p>
                     </div>
                     
@@ -106,7 +105,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
                         <p class="font-semibold text-gray-800">Baccalauréat général - Lycée René Josué Valin</p>
                         <p class="text-xs text-gray-500 mt-0.5">Septembre 2019 - Juillet 2023</p>
                         <p class="text-xs text-gray-600 mt-1">
-                            Spécialités Mathématiques, NSI et Physique-Chimie
+                            Spécialités Mathématiques, NSI et Physique-Chimie (jusqu'en Première).
                             Obtention du baccalauréat en 2023.
                         </p>
                     </div>
@@ -124,7 +123,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
                             <span class="text-xs text-gray-400">Mars 2018 - 2 semaines</span>
                         </div>
                         <ul class="list-disc pl-4 text-gray-600 mt-2 space-y-0.5 text-xs">
-                            <li>Réparation de matériel informatique et mises à jour firmware</li>
+                            <li>Réparation de matériel informatique et mises à jour de firmware</li>
                             <li>Accueil, support clientèle et optimisation du flux en boutique</li>
                         </ul>
                     </div>
@@ -139,13 +138,22 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
                 <h2 class="font-bold uppercase text-blue-600 text-sm tracking-widest">Forces</h2>
                 <hr class="border border-blue-300 rounded-full mt-0.5 mb-2">
                 <ul class="list-disc pl-4 text-gray-700 space-y-1">
-                    <li>Adaptable</li>
+                    <li>Adaptabilité</li>
                     <li>Rigueur</li>
-                    <li>Autonome</li>
-                    <li>Curieux</li>
+                    <li>Autonomie</li>
+                    <li>Curiosité</li>
                     <li>Esprit d'équipe</li>
                     <li>Communication</li>
                 </ul>
+            </section>
+
+            <section>
+                <h2 class="font-bold uppercase text-blue-600 text-sm tracking-widest">Disponibilité</h2>
+                <hr class="border border-blue-300 rounded-full mt-0.5 mb-2">
+                <div class="text-xs text-gray-700 space-y-1">
+                    <p><span class="font-semibold text-gray-800">À partir de :</span> Juillet 2026</p>
+                    <p><span class="font-semibold text-gray-800">Lieu :</span> La Rochelle et département 17</p>
+                </div>
             </section>
 
             <section>
@@ -164,7 +172,7 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
                     <div>
                         <div class="flex justify-between text-xs mb-1">
                             <span class="text-gray-700">Anglais</span>
-                            <span class="font-semibold text-gray-800">Intermédiaire (B2)</span>
+                            <span class="font-semibold text-gray-800">Avancé (C1)</span>
                         </div>
                         <div class="h-2 w-full bg-gray-200 rounded-full">
                             <div class="h-2 bg-blue-500 rounded-full w-2/3"></div>
@@ -177,8 +185,8 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
                 <h2 class="font-bold uppercase text-blue-600 text-sm tracking-widest">Autres</h2>
                 <hr class="border border-blue-300 rounded-full mt-0.5 mb-2">
                 <ul class="list-disc pl-4 text-gray-700 space-y-1">
-                    <li>Deug Informatique - 2025</li>
                     <li>Permis B – 2024</li>
+                    <li>DEUG Informatique – 2025</li>
                 </ul>
             </section>
 
@@ -186,8 +194,8 @@ document.querySelector<HTMLDivElement>('#app')!.innerHTML = `
                 <h2 class="font-bold uppercase text-blue-600 text-sm tracking-widest">Passions</h2>
                 <hr class="border border-blue-300 rounded-full mt-0.5 mb-2">
                 <ul class="text-gray-700 pl-4 flex flex-wrap gap-x-7 gap-y-1 list-disc">
+                    <li>Conduite</li>
                     <li>Informatique</li>
-                    <li>Aviation</li>
                     <li>Musculation</li>
                     <li>Bivouac</li>
                 </ul>

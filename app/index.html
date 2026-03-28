@@ -13,7 +13,7 @@
     <script type="module">
       const modules = import.meta.glob('./contents/*.ts')
       const params = new URLSearchParams(window.location.search)
-      const content = params.get('content') || 'french_lille_motivation'
+      const content = params.get('content') || 'french_qualyse_resume'
       const key = `./contents/${content}.ts`
       if (modules[key]) {
         await modules[key]()
